@@ -3,4 +3,4 @@ on: [push, pull_request]
 
 jobs:
   build:
-      uses: natewilcox/actions-workflows/.github/workflows/publish-npm.yml@main
+      uses: natewilcox/actions-workflows/.github/workflows/npm-publish.yml@main
