@@ -5,4 +5,4 @@ jobs:
   build:
       uses: natewilcox/actions-workflows/.github/workflows/npm-publish.yml@main
       secrets:
-        envPAT: ${{ secrets.NPM_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
