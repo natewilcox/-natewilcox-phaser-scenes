@@ -4,3 +4,5 @@ on: [push, pull_request]
 jobs:
   build:
       uses: natewilcox/actions-workflows/.github/workflows/npm-publish.yml@main
+      secrets:
+        envPAT: ${{ secrets.NPM_TOKEN }}
