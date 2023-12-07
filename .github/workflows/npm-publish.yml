@@ -3,8 +3,4 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use shared workflow
       uses: natewilcox/actions-workflows/.github/workflows/publish-npm.yml@main
