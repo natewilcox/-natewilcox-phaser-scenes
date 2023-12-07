@@ -1,0 +1,31 @@
+{
+  "name": "@natewilcox/phaser-scenes",
+  "version": "0.0.1",
+  "description": "Collection of scenes to be used in a phaser game",
+  "main": "main.js",
+  "types": "main.d.ts",
+  "files": [
+    "**/*"
+  ],
+  "scripts": {
+    "clean": "npx rimraf build && npx rimraf tsconfig.tsbuildinfo",
+    "build": "tsc",
+    "postbuild": "cp package.json README.md ./build",
+    "build:watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phaser",
+    "game",
+    "scenes"
+  ],
+  "author": "Nathan Wilcox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natewilcox/phaser-scenes.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "phaser": "^3.70.0"
+  }
+}
