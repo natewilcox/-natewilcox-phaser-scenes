@@ -24,7 +24,7 @@
     "type": "git",
     "url": "https://github.com/natewilcox/phaser-scenes.git"
   },
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "phaser": "^3.70.0"
   }
