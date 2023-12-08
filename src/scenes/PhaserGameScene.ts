@@ -9,7 +9,7 @@ export enum GameEvents {
     OnStopFullScreen = 'onstopfullscreen'
 }
 
-export class GameScene extends Phaser.Scene
+export class PhaserGameScene extends Phaser.Scene
 {
     private DEFAULT_MAX_HEIGHT = 600;
     private DEFAULT_MAX_WIDTH = 800;
