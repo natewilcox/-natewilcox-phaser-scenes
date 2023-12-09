@@ -11,7 +11,7 @@ export enum GameEvents {
 
 export class PhaserGameScene extends Phaser.Scene {
  
-    setResolution(width: number, height: number) {
+    setSize(width: number, height: number) {
 
         GAME_EVENT_EMMITER.emit(GameEvents.OnResizing);
 
