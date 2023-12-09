@@ -1,6 +1,6 @@
 {
   "name": "@natewilcox/phaser-scenes",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Collection of scenes to be used in a phaser game",
   "main": "build/main.js",
   "types": "build/main.d.ts",
