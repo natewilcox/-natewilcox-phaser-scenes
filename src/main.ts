@@ -1,1 +1,1 @@
-export * from './scenes/PhaserGameScene';
+export * from './scenes/Scene';

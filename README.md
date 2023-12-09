@@ -1,10 +1,10 @@
-# Phaser Scenes Repository
+# Phaser Nathan Repository
 
-This repository contains reusable Phaser scenes that can be used in Phaser mobile or desktop games.
+Nathan's extensions for Phaser 3
 
 ## Getting Started
 
 To use them in your Phaser game, install the package using npm:
 
 ```bash
-npm install @natewilcox/phaser-scenes
+npm install @natewilcox/phaser-nathan

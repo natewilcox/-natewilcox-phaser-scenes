@@ -9,25 +9,33 @@ export enum GameEvents {
     OnStopFullScreen = 'onstopfullscreen'
 }
 
-export class PhaserGameScene extends Phaser.Scene {
+export class Scene extends Phaser.Scene {
  
-    setScreenSize(width: number, height: number) {
+    setScreenSize(width: number, height: number, cssWidth?: number, cssHeight?: number) {
 
         GAME_EVENT_EMMITER.emit(GameEvents.OnResizing);
-
-        //set screen resolution
+    
+        // Set screen resolution
         this.game.canvas.width = width;
         this.game.canvas.height = height;
-
+    
+        // If cssWidth and cssHeight are not provided, use width and height
+        cssWidth = cssWidth || width;
+        cssHeight = cssHeight || height;
+    
+        // Set CSS size
+        this.game.canvas.style.width = cssWidth + 'px';
+        this.game.canvas.style.height = cssHeight + 'px';
+    
         console.info(`resizing to ${width}x${height}`);
-
+    
         this.game.renderer.resize(width, height);
         this.cameras.main.setSize(width, height);
         this.cameras.main.setViewport(0, 0, width, height);
-
+    
         this.scale.resize(width, height);
         this.scale.refresh();
-
+    
         GAME_EVENT_EMMITER.emit(GameEvents.OnResized);
     }
 
