@@ -13,6 +13,8 @@ export class PhaserGameScene extends Phaser.Scene {
  
     setResolution(width: number, height: number) {
 
+        GAME_EVENT_EMMITER.emit(GameEvents.OnResizing);
+
         //set screen resolution
         this.game.canvas.width = width;
         this.game.canvas.height = height;
@@ -25,6 +27,8 @@ export class PhaserGameScene extends Phaser.Scene {
 
         this.scale.resize(width, height);
         this.scale.refresh();
+
+        GAME_EVENT_EMMITER.emit(GameEvents.OnResized);
     }
 
     toggleFullscreen = () => {
