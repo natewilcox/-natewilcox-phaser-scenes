@@ -1,8 +1,8 @@
 # Ignore source code
-src
+./src
 
 # Ignore node modules
-node_modules
+./node_modules
 
 # Ignore Git related files
 .git
@@ -26,3 +26,9 @@ coverage
 # Ignore package lock files
 package-lock.json
 yarn.lock
+
+tsconfig.json
+tsconfig.tsbuildinfo
+package-lock.json
+.npmignore
+./.github

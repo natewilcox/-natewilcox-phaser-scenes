@@ -5,7 +5,7 @@
   "main": "build/main.js",
   "types": "build/main.d.ts",
   "files": [
-    "**/*"
+    "build/**/*"
   ],
   "scripts": {
     "clean": "npx rimraf build && npx rimraf tsconfig.tsbuildinfo",
