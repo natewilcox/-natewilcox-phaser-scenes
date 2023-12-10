@@ -26,6 +26,7 @@
   },
   "license": "GPL-3.0",
   "dependencies": {
+    "colyseus.js": "^0.15.14",
     "phaser": "^3.70.0"
   }
 }
