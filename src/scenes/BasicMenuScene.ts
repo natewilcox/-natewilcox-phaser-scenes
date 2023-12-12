@@ -26,16 +26,15 @@ export class BasicMenuScene extends Scene
         }
 
         this.onScreenResized(() => {
-
-            // Call the onresize callback if it exists
-            if(config.onresize) {
-                config.onresize(this);
-            }
-
             this.displayMenu(config.title, config.subTitle, config.menuItems);
         });
 
         this.displayMenu(config.title, config.subTitle, config.menuItems);
+
+        // Call the onresize callback if it exists
+        if(config.oncreate) {
+            config.oncreate(this);
+        }
     }
 
     private getInviteCode = () => { 

@@ -6,5 +6,5 @@ export type BasicMenuSceneConfig = {
     subTitle: string;
     menuItems: MenuOptionConfig[];
     nextScene?: string;
-    onresize?: (scene: Scene) => void;
+    oncreate?: (scene: Scene) => void;
 }
