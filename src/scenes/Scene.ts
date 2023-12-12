@@ -11,6 +11,10 @@ export enum GameEvents {
 
 export class Scene extends Phaser.Scene {
  
+    get isMobile() {
+        return 'contacts' in navigator;
+    }
+    
     create() {
 
         this.events.on(Phaser.Scenes.Events.SHUTDOWN, () => {

@@ -1,2 +1,4 @@
 export * from './scenes/Scene';
-export * from './services/ServerService'
+export * from './scenes/BasicMenuScene';
+export * from './services/ServerService';
+export * from './types/MenuOptionConfig';
