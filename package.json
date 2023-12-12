@@ -1,6 +1,6 @@
 {
   "name": "@natewilcox/phaser-nathan",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Nathan's extensions for Phaser 3",
   "main": "build/main.js",
   "types": "build/main.d.ts",
