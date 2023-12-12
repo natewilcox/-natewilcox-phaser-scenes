@@ -26,6 +26,12 @@ export class BasicMenuScene extends Scene
         }
 
         this.onScreenResized(() => {
+
+            // Call the onresize callback if it exists
+            if(config.onresize) {
+                config.onresize(this);
+            }
+
             this.displayMenu(config.title, config.subTitle, config.menuItems);
         });
 

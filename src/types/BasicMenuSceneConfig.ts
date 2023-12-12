@@ -1,3 +1,4 @@
+import { Scene } from "../scenes/Scene";
 import { MenuOptionConfig } from "./MenuOptionConfig";
 
 export type BasicMenuSceneConfig = {
@@ -5,4 +6,5 @@ export type BasicMenuSceneConfig = {
     subTitle: string;
     menuItems: MenuOptionConfig[];
     nextScene?: string;
+    onresize?: (scene: Scene) => void;
 }
