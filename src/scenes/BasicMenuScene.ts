@@ -18,6 +18,12 @@ export class BasicMenuScene extends Scene
     create(config?: BasicMenuSceneConfig) {
 
         super.create();
+
+        // Call the oncreated callback if it exists
+        if(config.oncreate) {
+            config.oncreate(this);
+        }
+
         this.nextScene = config.nextScene || 'game';
 
         const inviteCode = this.getInviteCode();
@@ -31,9 +37,9 @@ export class BasicMenuScene extends Scene
 
         this.displayMenu(config.title, config.subTitle, config.menuItems);
 
-        // Call the onresize callback if it exists
-        if(config.oncreate) {
-            config.oncreate(this);
+        // Call the oncreated callback if it exists
+        if(config.oncreated) {
+            config.oncreated(this);
         }
     }
 

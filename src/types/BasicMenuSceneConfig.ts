@@ -7,4 +7,5 @@ export type BasicMenuSceneConfig = {
     menuItems: MenuOptionConfig[];
     nextScene?: string;
     oncreate?: (scene: Scene) => void;
+    oncreated?: (scene: Scene) => void;
 }
