@@ -11,6 +11,13 @@ export enum GameEvents {
 
 export class Scene extends Phaser.Scene {
  
+    create() {
+
+        this.events.on(Phaser.Scenes.Events.SHUTDOWN, () => {
+            GAME_EVENT_EMMITER.destroy();
+        })
+    }
+
     setScreenSize(width: number, height: number, cssWidth?: number, cssHeight?: number) {
 
         GAME_EVENT_EMMITER.emit(GameEvents.OnResizing);
