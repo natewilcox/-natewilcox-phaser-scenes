@@ -35,14 +35,10 @@ export class Scene extends Phaser.Scene {
         this.game.canvas.style.height = cssHeight + 'px';
     
         console.info(`resizing to ${width}x${height}`);
-    
         this.game.renderer.resize(width, height);
-        this.cameras.main.setSize(width, height);
-        this.cameras.main.setViewport(0, 0, width, height);
-    
         this.scale.resize(width, height);
         this.scale.refresh();
-    
+        
         GAME_EVENT_EMMITER.emit(GameEvents.OnResized);
     }
 
