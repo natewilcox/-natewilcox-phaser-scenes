@@ -4,3 +4,4 @@ export * from './services/ServerService';
 export * from './types/MenuOptionConfig';
 export * from './types/BasicMenuSceneConfig';
 export * from './utils/SceneUtils';
+export * from './utils/SceneEvents';

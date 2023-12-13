@@ -15,3 +15,35 @@ export function resizeToScreen(scene: Scene, addListener?: boolean, maxWidth? : 
         resize();
     }
 }
+
+export function addText(scene: Scene, txt: string, x: number, y: number, config?: any, cb?: () => void) {
+
+    const gameText = scene.add.text(x, y, txt, {
+        fontSize: config.size || '32px',
+        fontFamily: config.font || 'Arial',
+        color: config.color || '#ffffff',
+        align: config.align || 'center'
+    })
+    .setOrigin(config.origin || config.originX || 0.5, config.origin || config.originY || 0.5);
+
+    if(cb) {
+        gameText.setInteractive();
+        gameText.on('pointerdown', cb);
+    }
+
+    return gameText;
+}
+
+export function addImage(scene: Scene, x: number, y: number, frame: string, config?: any, cb?: () => void) {
+
+    const image = scene.add.image(x, y, frame);
+    image.setScale(config.scale || 1);
+    image.setOrigin(config.origin || config.originX || 0.5, config.origin || config.originY || 0.5);
+
+    if(cb) {
+        image.setInteractive();
+        image.on('pointerdown', cb);
+    }
+
+    return image;
+}
