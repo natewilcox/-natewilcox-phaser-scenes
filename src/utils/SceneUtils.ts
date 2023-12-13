@@ -47,3 +47,12 @@ export function addImage(scene: Scene, frame: string, x: number, y: number, conf
 
     return image;
 }
+
+export function sendSMSInvite(url: string, roomId: string) {
+    
+    const inviteUrl = `${url}?invite=${roomId}`;
+    var smsUri = 'sms:?body=' + encodeURIComponent(`I challenge you at ${inviteUrl}`);
+
+    // Open the messaging app with the default message
+    window.open(smsUri, '_blank');
+}
