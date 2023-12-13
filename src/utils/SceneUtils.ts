@@ -34,7 +34,7 @@ export function addText(scene: Scene, txt: string, x: number, y: number, config?
     return gameText;
 }
 
-export function addImage(scene: Scene, x: number, y: number, frame: string, config?: any, cb?: () => void) {
+export function addImage(scene: Scene, frame: string, x: number, y: number, config?: any, cb?: () => void) {
 
     const image = scene.add.image(x, y, frame);
     image.setScale(config.scale || 1);
