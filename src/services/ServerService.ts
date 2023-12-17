@@ -20,22 +20,23 @@ export class ServerService<T, M> {
     private isTryingToReconnect = false;
     private msgs = { SendMessage: 0 } as EnumWithSendMessage<M>;
 
-    private constructor(serverUrl: string) {
-    
-        this.client = new Client(serverUrl);
-        this.serverUrl = serverUrl;
-        this.msgs.SendMessage
+    private constructor() {
     }
     
-    static getInstance<T, M>(serverUrl: string) {
+    static getInstance<T, M>() {
         
         if(!ServerService.instance) {
-            ServerService.instance = new ServerService<T, M>(serverUrl);
+            ServerService.instance = new ServerService<T, M>();
         }
 
         return ServerService.instance as ServerService<T, M>;
     }
-    
+
+    public configure(url: string) {
+        this.client = new Client(url);
+        this.serverUrl = url;
+    }
+
     get SessionID() {
         return this.room.sessionId;
     }
