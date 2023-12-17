@@ -10,6 +10,8 @@ type EnumWithSendMessage<T> = T & { SendMessage: 0 };
 
 export class ServerService<T, M> {
 
+    private static instance: ServerService<any, any>;
+
     private serverUrl: string;
     private room: Room<T>;
     private client: Client;
@@ -18,11 +20,20 @@ export class ServerService<T, M> {
     private isTryingToReconnect = false;
     private msgs = { SendMessage: 0 } as EnumWithSendMessage<M>;
 
-    constructor(serverUrl: string) {
+    private constructor(serverUrl: string) {
     
         this.client = new Client(serverUrl);
         this.serverUrl = serverUrl;
         this.msgs.SendMessage
+    }
+    
+    static getInstance<T, M>(serverUrl: string) {
+        
+        if(!ServerService.instance) {
+            ServerService.instance = new ServerService<T, M>(serverUrl);
+        }
+
+        return ServerService.instance as ServerService<T, M>;
     }
     
     get SessionID() {
